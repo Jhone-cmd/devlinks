@@ -84,7 +84,9 @@ body * {
     position: absolute;
     z-index: 1;
     top: 50%;
+    left: 0;
     transform: translateY(-50%);
+    animation: slide-out 0.4s;
     cursor: pointer;
 }
 
@@ -100,8 +102,11 @@ body * {
 }
 
 .light #switch button {
-    right: 0;
-    left: initial;
+    animation: slide-in 0.4s forwards;
+}
+
+#switch button:hover {
+    outline: 8px solid var(--highlight-color);
 }
 
 /* lista */
@@ -179,3 +184,19 @@ footer a{
         --background-url: url("./assets/images/bg-desktop-light.jpg");
     }
 }
+
+@keyframes slide-in {
+    from {
+        left: 0;
+    }
+    to {
+        left: 50%;
+    }
+}
+
+@keyframes slide-out {
+    from {
+        left: 50%;
+    }
+}
+
