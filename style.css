@@ -34,6 +34,7 @@ body {
     background-size: cover; */
     /* background: color image repeat position/size; */
     background: var(--background-url);
+    height: 100vh;
 }
 
 body * { 
@@ -167,4 +168,14 @@ footer {
 
 footer a{
        text-decoration: underline;
+}
+
+@media (min-widh: 700px) {
+    :root {
+        --background-url: url("./assets/images/bg-desktop.jpg");
+    }
+
+    .light {
+        --background-url: url("./assets/images/bg-desktop-light.jpg");
+    }
 }
